@@ -1,39 +1,44 @@
 name: Build Android APK
 
 on:
-push:
-branches: [ main, master ]
-workflow_dispatch:
+  push:
+    branches: [ main, master ]
+  workflow_dispatch:
 
 jobs:
-build:
-runs-on: ubuntu-latest
-steps:
-- name: Checkout repository
-uses: actions/checkout@v4
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-  - name: Set up Java
-    uses: actions/setup-java@v4
-    with:
-      distribution: 'zulu'
-      java-version: '17'
+      - name: Set up Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'zulu'
+          java-version: '17'
 
-  - name: Set up Flutter
-    uses: subosito/flutter-action@v2
-    with:
-      channel: 'stable'
-      cache: true
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: 'stable'
+          cache: true
 
-  - name: Install dependencies
-    run: flutter pub get
-    working-directory: eleven
+      - name: Create Flutter Android Project Structure
+        run: |
+          if [ ! -d "android" ]; then
+            echo "Creando estructura de proyecto Android/Flutter..."
+            flutter create . --platforms=android --org=com.example.eleven
+          fi
 
-  - name: Build APK
-    run: flutter build apk --release
-    working-directory: eleven
+      - name: Install dependencies
+        run: flutter pub get
 
-  - name: Upload APK Artifact
-    uses: actions/upload-artifact@v4
-    with:
-      name: app-release
-      path: eleven/build/app/outputs/flutter-apk/app-release.apk
+      - name: Build APK
+        run: flutter build apk --release
+
+      - name: Upload APK Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: app-release
+          path: build/app/outputs/flutter-apk/app-release.apk
