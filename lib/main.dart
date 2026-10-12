@@ -1,1 +1,237 @@
-This file configures the analyzer, which statically analyzes Dart code to check for errors, warnings, and lints. The issues identified by the analyzer are surfaced in the Ul of Dart-enabled IDEs (https://dart.dev/tools#ides-and-editors). The analyzer can also be invoked from the command line by running flutter analyze. The following line activates a set of recommended lints for Flutter apps, packages, and plugins designed to encourage good coding practices: include: package:flutter_lints/flutter.yaml linter: The lint rules applied to this project can be customized in the section below to disable rules from the package:flutter_lints/ flutter.yaml included above or to enable additional rules. A list of all available lints and their documentation is published at https://dart.dev/lints. Instead of disabling a lint rule for the entire project in the section below, it can also be suppressed for a single line of code or a specific dart file by using the // ignore: name_of_lint and // ignore_for_file: name_of_lint syntax on the line or in the file producing the lint. rules: # avoid_print: false # Uncomment to disable the avoid_print rule # prefer_single_quotes: true # Uncomment to enable the prefer_single_quotes rule Additional information about this file can be found at https://dart.dev/guides/language/ analysis-options. <?xml version ="1.0" encoding="UTF-8"?> <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "[http://www.apple.com/DTDs/](http://www.apple.com/DTDs/) PropertyList-1.0.dtd"> <plist version ="1.0"> <dict> <key>IDEDidComputeMac32BitWarning</key> <true/> </dict> </plist> #include "../../Flutter/Flutter-Release.xcconfig" #include "Warnings.xcconfig" WARNING_CFLAGS = -Wall -Wconditional- uninitialized -Wnullable-to-nonnull-conversion -Wmissing-method-return-type -Woverlength- strings GCC_WARN_UNDECLARED_SELECTOR = YES CLANG_UNDEFINED_BEHAVIOR_SANITIZER_NU LLABILITY = YES CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE CLANG_WARN_DUPLICATE_METHOD_MATCH = YES CLANG_WARN_PRAGMA_PACK = YES CLANG_WARN_STRICT_PROTOTYPES = YES CLANG_WARN_COMMA = YES GCC_WARN_STRICT_SELECTOR_MATCH = YES CLANG_WARN_OBJC_REPEATED_USE_OF_WEA K= YES CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES GCC_WARN_SHADOW = YES CLANG_WARN_UNREACHABLE_CODE = YES distributionBase=GRADLE_USER_HOME distributionPath=wrapper/dists zipStoreBase=GRADLE_USER_HOME zipStorePath=wrapper/dists distributionUrl=https://services.gradle.org/ distributions/gradle-9.1.0-all.zip // This is a generated file; do not edit or check into version control. FLUTTER_ROOT=/opt/flutter FLUTTER_APPLICATION_PATH=/usr/projects/ 1bee0229-139a-4eaa-8322-c19a66f5252f/eleven FLUTTER_FRAMEWORK_SWIFT_PACKAGE_PATH =/usr/projects/1bee0229-139a-4eaa-8322- c19a66f5252f/eleven/macos/Flutter/ephemeral/ Packages/.packages/FlutterFramework COCOAPODS_PARALLEL_CODE_SIGN=true FLUTTER_BUILD_DIR=build FLUTTER_BUILD_NAME = 1.0.0 FLUTTER_BUILD_NUMBER = 1 DART_OBFUSCATION=false TRACK_WIDGET_CREATION=true TREE_SHAKE_ICONS=false PACKAGE_CONFIG=.dart_tool/ package_config.json cmake_minimum_required(VERSION 3.13) project(runner LANGUAGES CXX) Define the application target. To change its name, change BINARY_NAME in the top-level CMakeLists.txt, not the value here, or flutter run will no longer work. Any new source files that you add to the application should be added here. add_executable({FLUTTER_MANAGED_DIR}/ generated_plugin_registrant.cc" ) Apply the standard set of build settings. This can be removed for applications that need different build settings. apply_standard_settings(${BINARY_NAME}) Add preprocessor definitions for the application ID. add_definitions(-DAPPLICATION_ID="$ {APPLICATION_ID}") Add dependency libraries. Add any application-specific dependencies here. target_link_libraries({BINARY_NAME} PRIVATE PkgConfig::GTK) target_include_directories({CMAKE_SOURCE_DIR}") // This is a basic Flutter widget test. // To perform an interaction with a widget in your test, use the WidgetTester utility in the flutter_test package. For example, you can send tap and scroll gestures. You can also use Widget Tester to find child widgets in the widget tree, read text, and verify that the values of widget properties are correct. import 'package:flutter/material.dart'; import 'package:flutter_test/flutter_test.dart'; import 'package:eleven/main.dart'; void main() { testWidgets('Counter increments smoke test', (WidgetTester tester) async { // Build our app and trigger a frame. await tester.pumpWidget(const MyApp()); // Verify that our counter starts at 0. expect(find.text('0'), findsOneWidget); expect(find.text('1'), findsNothing); // Tap the '+' icon and trigger a frame. await tester.tap (find.bylcon(Icons.add)); await tester.pump(); // Verify that our counter has incremented. expect(find.text('0'), findsNothing); expect(find.text('1'), findsOneWidget); }); } #include "../../Flutter/Flutter-Debug.xcconfig" #include "Warnings.xcconfig" // swift-tools-version: 5.9 // The swift-tools-version declares the minimum version of Swift required to build this package. // Generated file. Do not edit. import PackageDescription let package = Package( name: "FlutterGeneratedPluginSwiftPackage", platforms: [ .macOS ("10.15") ], products: [ .library(name: "FlutterGeneratedPluginSwiftPackage", type: .static, targets: ["FlutterGeneratedPluginSwiftPackage"]) ], dependencies: [ ], targets: [ .target( name: "FlutterGenerated PluginSwiftPackage" ) ) ] // Application-level settings for the Runner target. // This may be replaced with something auto-generated from metadata (e.g., pubspec.yaml) in the future. If not, the values below would default to using the project name when this becomes a 'flutter create' template. // The application's name. By default this is also the title of the Flutter window. PRODUCT_NAME = eleven // The application's bundle identifier PRODUCT_BUNDLE_IDENTIFIER = com.example.eleven // The copyright displayed in application information PRODUCT_COPYRIGHT = Copyright © 2026 com.example. All rights reserved. pluginManagement { val flutterSdkPath = run { val properties = java.util.Properties() file("local.properties").inputStream().use { properties.load(it) } val flutterSdkPath = } properties.getProperty("flutter.sdk") require(flutterSdkPath != null) { "flutter.sdk not set in local.properties" } flutterSdkPath includeBuild("$flutterSdkPath/packages/ flutter_tools/gradle") repositories { google() mavenCentral() gradlePlugin Portal() } } plugins { id("dev.flutter.flutter-plugin-loader") version "1.0.0" id("com.android.application") version "8.11.1" apply false id("org.jetbrains.kotlin.android") version "2.2.20" apply false } include(":app") Marketplace App Una aplicación de compra y venta moderna y ágil que reimagina la experiencia de Facebook Marketplace con una presentación fresca, directa y elegante. Permite a los usuarios descubrir productos locales organizados por categorías, contactar directamente a vendedores mediante chat y ofertas rápidas, y publicar artículos con fotos, descripción y precio en pocos pasos. Decisiones de diseño acordadas • Enfoque: Marketplace multirubro general (ropa, tecnología, hogar, vehículos y servicios). • Registro de perfil: Flujo guiado con pantalla dedicada para foto de perfil, nombre, edad y ubicación tras el inicio de sesión. • Contacto y compra: Modal emergente rápido desde el producto con mensaje predeterminado ('¿Sigue disponible?') y oferta personalizada, que conecta directamente al chat. Publicación de productos: Botón 'Vender' para subir fotos, nombre, precio, categoría y ubicación. • Sistema de mensajería: Bandeja de entrada con historial de conversaciones vinculadas al artículo de interés. • Estilo visual: Moderno y fresco con fondo claro (#F8FAFC), acentos verde esmeralda (#059669), esquinas suaves (14-16px) y tipografía Plus Jakarta Sans. org.gradle.jvmargs =-Xm\times8G -XX:MaxMetaspaceSize =4G -XX:Reserved CodeCacheSize =512m-XX: +HeapDumpOnOutOfMemoryError android.useAndroidX=true This newDsl flag was added by the Flutter template android.newDsl=false This builtInKotlin flag was added by the Flutter template android.builtInKotlin=false allprojects { repositories { google() mavenCentral() } } val newBuildDir: Directory = rootProject.layout.buildDirectory .dir("../../build") .get() rootProject.layout.buildDirectory.value(newBuild Dir) subprojects { val newSubprojectBuildDir: Directory = newBuildDir.dir(project.name) project.layout.buildDirectory.value(newSubprojec tBuildDir) } subprojects { project.evaluation DependsOn(":app") tasks.register<Delete>("clean") { delete(rootProject.layout.buildDirectory) } name: "eleven" description: "A new Nowa project." publish_to: "none" version: "1.0.0+1" environment: sdk: " >=3.2.0<4.0.0^{\prime\prime} dependencies: flutter: sdk: "flutter" nowa_runtime: "^0.2.0" provider: "^6.1.5" shared_preferences: "^2.5.4" dio: "^5.9.1" go_router: "^17.1.0" supabase_flutter: "^2.12.2" flutter_web_plugins: sdk: "flutter" dev_dependencies: flutter_test: sdk: "flutter" flutter_lints: "^5.0.0" flutter: uses-material-design: true assets: - "assets/" - "assets/fonts/" fonts: -family: "Plus Jakarta Sans" fonts: asset: "assets/fonts/Plus Jakarta Sans.ttf"  
+// ==========================================
+// ARCHIVO: analysis_options.yaml[span_0](start_span)[span_0](end_span)[span_1](start_span)[span_1](end_span)[span_2](start_span)[span_2](end_span)[span_3](start_span)[span_3](end_span)[span_4](start_span)[span_4](end_span)
+// ==========================================
+include: package:flutter_lints/flutter.yaml
+linter:
+  rules:
+    # avoid_print: false
+    # prefer_single_quotes: true
+
+// ==========================================
+// ARCHIVO: Info.plist[span_5](start_span)[span_5](end_span)
+// ==========================================
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>IDEDidComputeMac32BitWarning</key>
+    <true/>
+</dict>
+</plist>
+
+// ==========================================
+// ARCHIVO: Warnings.xcconfig[span_6](start_span)[span_6](end_span)[span_7](start_span)[span_7](end_span)[span_8](start_span)[span_8](end_span)
+// ==========================================
+WARNING_CFLAGS = -Wall -Wconditional-uninitialized -Wnullable-to-nonnull-conversion -Wmissing-method-return-type -Woverlength-strings
+GCC_WARN_UNDECLARED_SELECTOR = YES
+CLANG_UNDEFINED_BEHAVIOR_SANITIZER_NULLABILITY = YES
+CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE
+CLANG_WARN_DUPLICATE_METHOD_MATCH = YES
+CLANG_WARN_PRAGMA_PACK = YES
+CLANG_WARN_STRICT_PROTOTYPES = YES
+CLANG_WARN_COMMA = YES
+GCC_WARN_STRICT_SELECTOR_MATCH = YES
+CLANG_WARN_OBJC_REPEATED_USE_OF_WEAK = YES
+CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES
+GCC_WARN_SHADOW = YES
+CLANG_WARN_UNREACHABLE_CODE = YES
+
+// ==========================================
+// ARCHIVO: gradle-wrapper.properties[span_9](start_span)[span_9](end_span)
+// ==========================================
+distributionBase=GRADLE_USER_HOME
+distributionPath=wrapper/dists
+zipStoreBase=GRADLE_USER_HOME
+zipStorePath=wrapper/dists
+distributionUrl=https://services.gradle.org/distributions/gradle-9.1.0-all.zip
+
+// ==========================================
+// ARCHIVO: Generated Environment[span_10](start_span)[span_10](end_span)[span_11](start_span)[span_11](end_span)
+// ==========================================
+FLUTTER_ROOT=/opt/flutter
+FLUTTER_APPLICATION_PATH=/usr/projects/1bee0229-139a-4eaa-8322-c19a66f5252f/eleven
+FLUTTER_FRAMEWORK_SWIFT_PACKAGE_PATH=/usr/projects/1bee0229-139a-4eaa-8322-c19a66f5252f/eleven/macos/Flutter/ephemeral/Packages/.packages/FlutterFramework
+COCOAPODS_PARALLEL_CODE_SIGN=true
+FLUTTER_BUILD_DIR=build
+FLUTTER_BUILD_NAME=1.0.0
+FLUTTER_BUILD_NUMBER=1
+DART_OBFUSCATION=false
+TRACK_WIDGET_CREATION=true
+TREE_SHAKE_ICONS=false
+PACKAGE_CONFIG=.dart_tool/package_config.json
+
+// ==========================================
+// ARCHIVO: CMakeLists.txt (Runner)[span_12](start_span)[span_12](end_span)[span_13](start_span)[span_13](end_span)[span_14](start_span)[span_14](end_span)[span_15](start_span)[span_15](end_span)
+// ==========================================
+cmake_minimum_required(VERSION 3.13)
+project(runner LANGUAGES CXX)
+add_executable(${BINARY_NAME} "main.cc"
+  "flutter_window.cc"
+  "run_loop.cc"
+  "utils.cc"
+  "${FLUTTER_MANAGED_DIR}/generated_plugin_registrant.cc"
+)
+apply_standard_settings(${BINARY_NAME})
+add_definitions(-DAPPLICATION_ID="${APPLICATION_ID}")
+target_link_libraries(${BINARY_NAME} PRIVATE PkgConfig::GTK)
+target_include_directories(${BINARY_NAME} PRIVATE "${CMAKE_SOURCE_DIR}")
+
+// ==========================================
+// ARCHIVO: widget_test.dart[span_16](start_span)[span_16](end_span)[span_17](start_span)[span_17](end_span)
+// ==========================================
+import 'package:flutter/material.dart';
+import 'package:flutter_test/flutter_test.dart';
+import 'package:eleven/main.dart';
+
+void main() {
+  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
+    await tester.pumpWidget(const MyApp());
+    expect(find.text('0'), findsOneWidget);
+    expect(find.text('1'), findsNothing);
+    await tester.tap(find.byIcon(Icons.add));
+    await tester.pump();
+    expect(find.text('0'), findsNothing);
+    expect(find.text('1'), findsOneWidget);
+  });
+}
+
+// ==========================================
+// ARCHIVO: AppInfo.xcconfig[span_18](start_span)[span_18](end_span)[span_19](start_span)[span_19](end_span)
+// ==========================================
+PRODUCT_NAME = eleven
+PRODUCT_BUNDLE_IDENTIFIER = com.example.eleven
+PRODUCT_COPYRIGHT = Copyright © 2026 com.example. All rights reserved.
+
+// ==========================================
+// ARCHIVO: settings.gradle[span_20](start_span)[span_20](end_span)[span_21](start_span)[span_21](end_span)
+// ==========================================
+pluginManagement {
+    val flutterSdkPath = run {
+        val properties = java.util.Properties()
+        file("local.properties").inputStream().use { properties.load(it) }
+        val flutterSdkPath = properties.getProperty("flutter.sdk")
+        require(flutterSdkPath != null) { "flutter.sdk not set in local.properties" }
+        flutterSdkPath
+    }
+    includeBuild("$flutterSdkPath/packages/flutter_tools/gradle")
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+plugins {
+    id("dev.flutter.flutter-plugin-loader") version "1.0.0"
+    id("com.android.application") version "8.11.1" apply false
+    id("org.jetbrains.kotlin.android") version "2.2.20" apply false
+}
+include(":app")
+
+// ==========================================
+// DESCRIPCIÓN: Marketplace App[span_22](start_span)[span_22](end_span)[span_23](start_span)[span_23](end_span)[span_24](start_span)[span_24](end_span)
+// ==========================================
+/*
+Marketplace App: Una aplicación de compra y venta moderna y ágil que reimagina la experiencia de Facebook Marketplace.
+- Enfoque: Marketplace multirubro general (ropa, tecnología, hogar, vehículos y servicios).
+- Registro de perfil: Flujo guiado con pantalla dedicada para foto de perfil, nombre, edad y ubicación.
+- Contacto y compra: Modal emergente rápido con mensaje predeterminado ('¿Sigue disponible?') y oferta personalizada hacia el chat.
+- Publicación: Botón 'Vender' para fotos, nombre, precio, categoría y ubicación.
+- Estilo visual: Fondo claro (#F8FAFC), acentos verde esmeralda (#059669), esquinas suaves (14-16px) y tipografía Plus Jakarta Sans.
+*/
+
+// ==========================================
+// ARCHIVO: gradle.properties[span_25](start_span)[span_25](end_span)[span_26](start_span)[span_26](end_span)
+// ==========================================
+org.gradle.jvmargs=-Xmx8G -XX:MaxMetaspaceSize=4G -XX:ReservedCodeCacheSize=512m -XX:+HeapDumpOnOutOfMemoryError
+android.useAndroidX=true
+android.newDsl=false
+android.builtInKotlin=false
+
+// ==========================================
+// ARCHIVO: build.gradle (Root)[span_27](start_span)[span_27](end_span)[span_28](start_span)[span_28](end_span)
+// ==========================================
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+val newBuildDir: Directory = rootProject.layout.buildDirectory.dir("../../build").get()
+rootProject.layout.buildDirectory.value(newBuildDir)
+subprojects {
+    val newSubprojectBuildDir: Directory = newBuildDir.dir(project.name)
+    project.layout.buildDirectory.value(newSubprojectBuildDir)
+}
+subprojects {
+    project.evaluationDependsOn(":app")
+}
+tasks.register<Delete>("clean") {
+    delete(rootProject.layout.buildDirectory)
+}
+
+// ==========================================
+// ARCHIVO: pubspec.yaml[span_29](start_span)[span_29](end_span)[span_30](start_span)[span_30](end_span)[span_31](start_span)[span_31](end_span)
+// ==========================================
+name: "eleven"
+description: "A new Nowa project."
+publish_to: "none"
+version: "1.0.0+1"
+environment:
+  sdk: ">=3.2.0 <4.0.0"
+dependencies:
+  flutter:
+    sdk: "flutter"
+  nowa_runtime: "^0.2.0"
+  provider: "^6.1.5"
+  shared_preferences: "^2.5.4"
+  dio: "^5.9.1"
+  go_router: "^17.1.0"
+  supabase_flutter: "^2.12.2"
+  flutter_web_plugins:
+    sdk: "flutter"
+dev_dependencies:
+  flutter_test:
+    sdk: "flutter"
+  flutter_lints: "^5.0.0"
+flutter:
+  uses-material-design: true
+  assets:
+    - "assets/"
+    - "assets/fonts/"
+  fonts:
+    - family: "Plus Jakarta Sans"
+      fonts:
+        - asset: "assets/fonts/Plus Jakarta Sans.ttf"
+
+// ==========================================
+// ARCHIVO: app/build.gradle[span_32](start_span)[span_32](end_span)[span_33](start_span)[span_33](end_span)[span_34](start_span)[span_34](end_span)[span_35](start_span)[span_35](end_span)[span_36](start_span)[span_36](end_span)
+// ==========================================
+plugins {
+    id("com.android.application")
+    id("kotlin-android")
+    id("dev.flutter.flutter-gradle-plugin")
+}
+android {
+    namespace = "com.example.eleven1bee02"
+    compileSdk = flutter.compileSdkVersion
+    ndkVersion = flutter.ndkVersion
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
+    }
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_11.toString()
+    }
+    defaultConfig {
+        applicationId = "com.example.eleven1bee02"
+        minSdk = flutter.minSdkVersion
+        targetSdk = flutter.targetSdkVersion
+        versionCode = flutter.versionCode
+        versionName = flutter.versionName
+    }
+    buildTypes {
+        release {
+            signingConfig = signingConfigs.getByName("release")
+        }
+    }
+}
